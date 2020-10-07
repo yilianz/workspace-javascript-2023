@@ -12,21 +12,23 @@ and open the template in the editor.
 
 html{
     background-color: hsl(145, 35%, 89%);
-    padding: 2%;
+    padding: 1%;
 }
 
 body{
     background-color: white;
     color: black;
-    height: 700px;
     margin: auto auto;
     padding: 5%;
+    position: relative;
     
 }
 
 h1{
-    background-color: hsla(0,100%,63%,0.9);
-    padding: 1px;
+    background-color: rgba(9, 5, 219, 0.5);
+    padding: 2px;
+    margin: 0 -5px 10px -5px;
+    font-size: 1.2em;
 }
 
 span{
@@ -37,10 +39,8 @@ span{
 
 p{
     line-height: 1.5em;
-    background-image: url(../img/backPara.png);
-    border: 1px solid cadetblue;
-    border-radius: 5px;
-    padding: 1%;
+    border-left: 3px ridge cadetblue;
+    padding-left: 2%;
 }
 
 table{
@@ -53,16 +53,51 @@ td,th{
 }
 
 .practice{
-
-	margin: 15px;
+	margin: 10px;
 	width: 400px;
+  padding: 2px 2% 5px 2%;
 	background-color: #ececec;
+  border-radius: 5px;
 	box-shadow : 0 6px 20px rgba(0,0,0,.2); 
-
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+
 }
 
+            .img-container{
+                position: fixed;
+                width: 70%;
+                top: 10%;
+                left: 15%;
+                margin: 0 auto;
+                padding: 0 auto;
+                display: block;
+                opacity: 1;
+            }
+
+            .img-container-hide{
+                position: fixed;
+                width: 70%;
+                top: 10%;
+                left: 15%;
+                margin: 0 auto;
+                padding: 0 auto;
+                display: block;
+                opacity: 0;
+               
+            }
+
+           .img-container-hide img{
+                width: 100%;
+            }
+          .img-container img{
+                width: 100%;
+            }
+            div{
+                transition: opacity ease-in-out 3s, left ease-in-out 3s;
+            }

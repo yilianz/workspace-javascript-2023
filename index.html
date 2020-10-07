@@ -3,32 +3,366 @@
 <head>
 	<meta charset="UTF-8">
 
-	<link rel="stylesheet" type="text/css" href="css/main.css"> 
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<!-- Jquery library   ---->
 	<script src="https://code.jquery.com/jquery-3.5.1.js"
 		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
 
 </head>
 
 <body>
 	<div class="wrapper">
 
+		<div class="practice">
+			<h1>
+				Hello world to JavaScript
+			</h1>
+			<p>
+				<script>
+					document.write("JavaScript is a loose typed language");
+                    
+            document.title="Yilian Zhang";
+            console.log("hello!!");
+				</script>
+			</p>
+			<p> Import external javascript:
+				<script src="js/hello.js"></script>
+			</p>
+		</div>
 
+		<div class="practice">
+			<h1> Varible and Arithemetic Operation</h1>
+			<p> Practice on variables </p>
+
+
+
+
+
+		</div>
+
+		<div class="practice">
+			<h1> JavaScript Escape Sequence</h1>
+			<p> Write an image to the page </p>
+
+
+			<p> Write a table to the page </p>
+
+		</div>
+
+		<div class="practice">
+			<h1>Window and document object </h1>
+			<p> Try alert, open, location, url </p>
+			<script>
+
+			</script>
+
+
+		</div>
+
+		<div class="practice">
+			<h1> Get textcontent of an element </h1>
+			<p>Perform arithmetic operation on <span id="num1"> 4 </span> and <span id="num2">5 </span> </p>
+			<p>Result: <script src="js/arith.js"></script>
+			</p>
+
+		</div>
+
+		<div class="practice">
+			<h1> Get innerHTML of an elemnt</h1>
+			<p id="p1"> Paragraph Number One </p>
+			<p id="p2"> Paragraph Number two </p>
+			<p id="p3"> Paragraph Number three </p>
+			<p>Please write JavaScript code to change the content of each paragraph.​
+				<p>
+
+
+		</div>
+
+		<div class="practice">
+			<h1> Get input from a form </h1>
+			<p> Please enter your numbers </p>
+			<script>
+				function calculate(){
+
+              
+            }
+			</script>
+			<p> <input type="text" name="num1"/> + <input type="text" name="num2" >
+				<input type="button" value="=" onclick="calculate();" >
+				<label id="result"> ? </label>
+			</p>
+
+		</div>
+
+		<div class="practice">
+			<h1>JavaScript Events - blur -addEventListener </h1>
+			<form>
+				<p>
+					<label> Name:
+                <input type="text" id="cName">
+            </label>
+				</p>
+
+				<p id="message">
+
+				</p>
+
+				<p>
+					<label> Email:
+                <input type="text" id="cEmail" >
+            </label>
+				</p>
+			</form>
+
+		</div>
+
+		<div class="practice">
+			<h1> Practice - Calculate Square</h1>
+			Calculating Square:
+			<input type="text"  id="num" placeholder="Type in a number"> <sup> 2 </sup> =
+			<label id="result"> ? </label>
+
+		</div>
+
+		<div class="practice">
+			<h1> Difference between textcontent and innerHTML</h1>
+			<p> HTML Try it Editor </p>
+			<p>ENTER your code </p>​
+			<textarea cols="40" rows="20" id="code">​
+
+      </textarea>​
+
+			<input type="button" id="tryit" value="Click and Display" >​
+
+			<div id="message">​
+			</div>
+
+
+		</div>
+
+		<div class="practice">
+			<h1>Decision statement - If </h1>
+			Honda Accord Used Car price estimate,
+			<p>Please enter the year of the car
+				<select id="year">
+                <option> 2003</option>
+                <option> 2004</option>
+            </select>.</p>
+			<p>Please enter the condition of the car
+				<select id="condition">
+                <option> Fair</option>
+                <option> Good</option>
+            </select>.</p>
+
+			<p id="price">
+
+			</p>
+
+			<script type="text/javascript">
+
+
+
+			</script>
+
+		</div>
+
+		<div class="practice">
+			<h1> Decision Statement - Switch</h1>
+			<p> Choose your favorite theme(warm, cool, hot)
+				<input type="text" id="theme" >
+        </p>
+
+		</div>
+
+
+
+		<div class="practice">
+			<h1> Switch practice -- Insurance Application</h1>
+			<p> Choose your coverage
+				<input type="radio" name="coverage" value="100000">100000
+				<input type="radio" name="coverage" value="200000">200000
+				<input type="radio" name="coverage" value="300000">300000
+
+       </p>
+				<p> Choose your age group.
+					<select id="agegroup">
+               <option> under 30 </option>
+               <option> 30-34 </option>
+               <option> 35-39</option>
+               <option> 40-44 </option>
+               
+           </select>
+
+				</p>
+				<p>
+					<input type="button" value="Check Premium">
+       </p>
+					<p id="result">
+
+					</p>
+
+		</div>
 
 
 
 
 		<div class="practice">
-			<h1>Continue other practices</h1>
-			<a href="JSON.html">JSON Practice</a>
-			<a href="element.html"> Element Practice </a>
+			<h1>For Loop Practice 1 </h1>
+			<p> Display the square of numer 1... N </p>
+			<p> N = <input type="number" min="1" max="10" id="inputnumber1"> </p>
+				<p>
+					<input type="button" value="Click for Square">
+       </p>
+
 		</div>
 
 
+		<div class="practice">
+			<h1>For Loop Practice 2 </h1>
+			<!--  Input number box -->
+			<p> N = <input type="number" min="1" max="10" id="inputnumber2"> </p>
+				<p>
+					<input type="button" value="Click for multiplication table">
+       </p>
 
-	</div>
-	<script src="script.js"> </script>
-	<script src="js/practice.js"></script>
+					<!-- output section -->
+					<div id="output">
+
+
+					</div>
+
+		</div>
+
+
+		<div class="practice">
+			<h1>For loop practice 3 -Math Drill </h1>
+			<p> N = <input type="number" min="1" max="10" id="inputnumber3"> </p>
+
+				<p>
+					<input type="button" value="Click for multiplication drill">
+       </p>
+					<script src="js\mathdrill.js">
+					</script>
+		</div>
+
+		<div class="practice">
+			<h1> A simple JavaScript Quiz</h1>
+			<p> A simple JavaScript Quiz </p>
+			<p>Target: Generate 10 basic multiplication problems using JavaScript and check the answers</p>
+		</div>
+
+		<div class="practice">
+			<h1>Change Attribute -- Rolling a dice </h1>
+			<p> <input type="button" id="roll" value="roll" /> </p>
+				<p> <img src="img/die1.png"> </p>
+					<table>
+						<tr>
+							<th>Result</th>
+							<th>1</th>
+							<th>2</th>
+							<th>3</th>
+							<th>4</th>
+							<th>5</th>
+							<th>6</th>
+						</tr>
+						<tr>
+							<th>Statistics</th>
+							<td id="r1"></td>
+							<td id="r2"></td>
+							<td id="r3"></td>
+							<td id="r4"></td>
+							<td id="r5"></td>
+							<td id="r6"></td>
+						</tr>
+					</table>
+
+		</div>
+
+
+		<div class="practice">
+			<h1> Array example - Image banner</h1>
+			<div class="img-container-hide">
+				<img src="img/usca1.jpg" alt ="usca" >
+      </div>
+			<div class="img-container-hide">
+					<img src="img/usca2.jpg" alt ="usca" >
+      </div>
+			<div class="img-container-hide">
+						<img src="img/usca3.jpg" alt ="usca" >
+      </div>
+			<div class="img-container-hide">
+							<img src="img/usca4.jpg" alt ="usca" >
+      </div>
+			<div class="img-container-hide">
+					<img src="img/usca5.jpg" alt="usca" >
+      </div>
+
+		</div>
+
+					
+						<div class="practice">
+							<h1>JavaScript Object </h1>
+							<p> Hotel registration </p>
+							<div>
+								<form>
+									<p>
+										Name: <input type ="text" id="name">
+                </p>
+										<p>
+											Check in: <input type="date" id="checkin">  Check out: <input type="date" id="checkout">
+                </p>
+											<p>
+												Number of guest: <input type="number" id ="num" min="0" max="5">
+                </p>
+												<p>
+													Room Type: <select id="room">
+                        <option>1 Bedroom Smaller Suite $139 </option>
+                        
+                        <option> 1 Bedroom Larger Suite $169 </option>
+                        <option> 1 Bedroom Junior Suite $289</option>
+                        <option> Grand Suite $289</option>
+                    </select>
+												</p>
+
+												<p>
+													<input id="submit" type="button" value="submit">
+                </p>
+													<p>
+														<input id="lists" type="button" value="List current reservations">
+                </p>
+								</form>
+
+							</div>
+
+
+
+
+							<div class="practice">
+								<h1> </h1>
+
+
+							</div>
+
+
+							<div class="practice">
+								<h1> </h1>
+
+
+							</div>
+
+
+							<div class="practice">
+								<h1>Continue other practices</h1>
+								<a href="JSON.html">JSON Practice</a>
+								<a href="element.html"> Element Practice </a>
+							</div>
+
+
+
+						</div>
+						<script src="script.js"> </script>
+						<script src="js/practice.js"></script>
 
 
 </body>
