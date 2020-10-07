@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 13, 2016, 2:59:17 PM
+    Author     : yilianz
+*/
+
+/** Color  **/
+
+html{
+    background-color: hsl(145, 35%, 89%);
+    padding: 2%;
+}
+
+body{
+    background-color: white;
+    color: black;
+    height: 700px;
+    margin: auto auto;
+    padding: 5%;
+    
+}
+
+h1{
+    background-color: hsla(0,100%,63%,0.9);
+    padding: 1px;
+}
+
+span{
+    font-size:150%;
+    color:gray;
+}
+
+
+p{
+    line-height: 1.5em;
+    background-image: url(../img/backPara.png);
+    border: 1px solid cadetblue;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+table{
+    border: 1px solid cadetblue;
+}
+
+td,th{
+    padding: 5px;
+    border-bottom: 1px solid cadetblue;
+}
+
+.practice{
+
+	margin: 15px;
+	width: 400px;
+	background-color: #ececec;
+	box-shadow : 0 6px 20px rgba(0,0,0,.2); 
+
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
