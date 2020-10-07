@@ -87,7 +87,7 @@ td,th{
                 left: 15%;
                 margin: 0 auto;
                 padding: 0 auto;
-                display: block;
+                display: none;
                 opacity: 0;
                
             }
