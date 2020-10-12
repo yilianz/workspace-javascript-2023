@@ -69,6 +69,11 @@ td,th{
 
 }
 
+textarea{
+  align-content: left;
+  text-align: left;
+}
+
             .img-container{
                 position: fixed;
                 width: 70%;
