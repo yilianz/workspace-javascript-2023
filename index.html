@@ -51,8 +51,12 @@
             <p> Write an image to the page </p>
             
           <script>
-         
-             document.write("<img src=\"img/die1.png\">");
+             var imglist = "";
+             for (var i = 1;i<10 i++;){
+               imglist += "<img src=\"img/die1.png\">"
+             }
+
+             document.write(imglist);
           
           </script>
 
@@ -148,7 +152,7 @@
         </div>
 
         <div class="practice">
-            <h1> Difference between textcontent and innerHTML</h1>
+ <h1> Difference between textcontent and innerHTML</h1>
             <p> HTML Try it Editor </p>
             <p>ENTER your code </p>​
             <textarea cols="40" rows="20" id="code">​
@@ -157,8 +161,16 @@
 
             <input type="button" id="tryit" value="Click and Display">​
 
-            <div id="message">​
+            <div id="m1">​
             </div>
+            <script>
+                function convert(){
+                        document.getElementById('m1').innerHTML = document.getElementById('code').value;
+                }
+
+                document.getElementById('tryit').addEventListener('click',convert,false);    
+
+            </script>
 
 
         </div>
