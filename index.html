@@ -49,17 +49,17 @@
         <div class="practice">
             <h1> JavaScript Escape Sequence</h1>
             <p> Write an image to the page </p>
-            
+            <p id="here"> </p>
           <script>
              var imglist = "";
              for (var i = 1;i<10 i++;){
                imglist += "<img src=\"img/die1.png\">"
              }
 
-             document.write(imglist);
+             document.getElementById('here').innerHTML =imglist;
           
           </script>
-
+            
             <p> Write a table to the page </p>
 
         </div>
