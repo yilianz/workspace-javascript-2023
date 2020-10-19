@@ -247,6 +247,42 @@
 
 					</p>
 
+             <script type="text/javascript">
+            //add event listener to the button
+            
+            function premium() {
+                //get the radio element value
+                var e1 = document.querySelector('input[name="coverage"]:checked');
+                var coverage = parseInt(e1.value);
+
+                //get the value from the selection box
+                var e2 = document.getElementById("agegroup");
+                alert(e2.selectedIndex);
+                var ageindex = e2.selectedIndex;
+                //procedure
+                var agefactor = 0;
+                switch (ageindex) {
+                    case 0:
+                        agefactor = 0.08;
+                        break;
+                    case 1:
+                        agefactor = 0.09;
+                        break;
+                    case 2:
+                        agefactor = 0.11; break
+                    default: agefactor = 0.29;
+                        break;
+                }
+
+                var answer = 10 + agefactor * coverage/1000;
+                document.getElementById('result').textContent = "It is"+ answer;
+
+                
+            }
+
+
+     </script> 
+
 		</div>
 
 
