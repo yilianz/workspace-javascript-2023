@@ -156,6 +156,22 @@
 			</form>
 
 			<script>
+          // event handler
+          function welcome(){
+            // display a welcome message 
+            //get input
+            var name = document.getElementById('cName').value;
+            //display message
+            var outputE = document.getElementById('message');
+            outputE.innerHTML="Welcome to JavaScript Event <b>" + name +"</b>";
+
+          }
+
+          // event ---> even handler
+          // action 
+          var fE = document.getElementById('cName');
+          fE.addEventListener('blur',welcome,false);
+
 
 			</script>
 
@@ -167,6 +183,15 @@
 			Calculating Square:
 			<input type="text" id="num" placeholder="Type in a number"> <sup> 2 </sup> =
 			<label id="squareresult"> ? </label>
+
+      <script>
+          // event handler
+
+
+          // register event with handler
+
+
+      </script>
 
 		</div>
 
@@ -180,8 +205,20 @@
 
 			<input type="button" id="tryit" value="Click and Display">​
 
-			<div id="m1">​
+			<div id="message1">​
 			</div>
+      <script>
+          //handler
+          function convertHTML() {
+            var inputcode = document.getElementById('code').value;
+            document.getElementById('message1').innerHTML = inputcode;
+
+          }
+
+          // add listerner
+        document.getElementById('tryit').addEventListener('click',convertHTML);
+
+      </script>
 
 
 		</div>
@@ -205,6 +242,28 @@
 			</p>
 
 			<script type="text/javascript">
+          // event handler
+          function getprice(){
+            //get input
+            var yearCar = document.getElementById('year').value;
+            var conditioncar = document.getElementById('condition').value;
+            console.log(yearCar+" "+conditioncar);
+            // make Decision
+            var price = 0;
+            if (yearCar =="2003" && conditioncar =="Good"){
+              price = 3500;
+            }else if (yearCar =="2004" && conditioncar =="Fair"){
+              price = 4500;
+            }
+            //Display
+            document.getElementById('price').textContent=price.toString(); 
+            // answer.tofixed(2)  in the homework
+
+          }
+
+          //register event change  ---  getprice
+          document.getElementById('year').addEventListener('change',getprice);
+          document.getElementById('condition').addEventListener('change',getprice);
 
 
 
@@ -360,7 +419,7 @@
 				<p>
 					<input type="button" value="Click for multiplication drill">
             </p>
-					<script src="js\mathdrill.js">
+	
 					</script>
 		</div>
 
