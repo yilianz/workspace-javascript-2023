@@ -217,6 +217,33 @@
 			<p> Choose your favorite theme(warm, cool, hot)
 				<input type="text" id="theme">
             </p>
+				<script type="text/javascript">
+					document.getElementById("theme").addEventListener('blur', changeTheme, false);    
+
+                function changeTheme() {
+                    //Get input
+                    var theme = document.getElementById("theme").value;
+                    var bcolor;
+
+                    switch (theme) {
+                        case "warm":
+                            bcolor = "green";
+                            break;
+                        default:
+                            bcolor = "white";
+                    }
+                    
+                    // use style object directly
+                  // document.body.style.backgroundColor = bcolor;
+                     
+                    
+                    // Or set attribute
+                    document.body.setAttribute('style', "background-color: "+bcolor);
+                }
+          
+ 
+				</script>
+
 
 		</div>
 
