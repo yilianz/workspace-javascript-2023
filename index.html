@@ -155,9 +155,9 @@
 				</p>
 			</form>
 
-      <script>
+			<script>
 
-        </script>
+			</script>
 
 
 		</div>
@@ -166,7 +166,7 @@
 			<h1> Practice - Calculate Square</h1>
 			Calculating Square:
 			<input type="text" id="num" placeholder="Type in a number"> <sup> 2 </sup> =
-			<label id="result"> ? </label>
+			<label id="squareresult"> ? </label>
 
 		</div>
 
@@ -243,13 +243,13 @@
 				<p>
 					<input type="button" value="Check Premium">
             </p>
-					<p id="result">
+					<p id="premium">
 
 					</p>
 
-             <script type="text/javascript">
-            //add event listener to the button
-            
+					<script type="text/javascript">
+						//add event listener to the button  -- TRY IT
+           
             function premium() {
                 //get the radio element value
                 var e1 = document.querySelector('input[name="coverage"]:checked');
@@ -257,8 +257,10 @@
 
                 //get the value from the selection box
                 var e2 = document.getElementById("agegroup");
-                alert(e2.selectedIndex);
                 var ageindex = e2.selectedIndex;
+                
+
+
                 //procedure
                 var agefactor = 0;
                 switch (ageindex) {
@@ -275,13 +277,14 @@
                 }
 
                 var answer = 10 + agefactor * coverage/1000;
-                document.getElementById('result').textContent = "It is"+ answer;
+                //console.log(ageindex+" "+coverage+" "+answer);
+                document.getElementById('premium').textContent = "It is"+ answer;
 
                 
             }
 
 
-     </script> 
+					</script>
 
 		</div>
 
