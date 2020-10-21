@@ -388,8 +388,29 @@
 			<p> Display the square of numer 1... N </p>
 			<p> N = <input type="number" min="1" max="10" id="inputnumber1"> </p>
 				<p>
-					<input type="button" value="Click for Square">
-            </p>
+					<input type="button" id="square" value="Click for Square">
+        </p>
+					<script>
+						//register action
+            $('#square').click(displaysquare);
+
+            // event handler
+            function displaysquare(){
+                var n = parseInt(document.getElementById('inputnumber1').value);
+                // have the loop
+                var output="";
+                for(var i = 1; i<=n; i++){
+                    var square= i*i;
+                    output +="<h1>"+ i +"<sup> 2 </sup> = " + square +"</h1>";
+                }
+
+               //document.writeln(output);
+
+
+            }
+
+					</script>
+
 
 
 		</div>
