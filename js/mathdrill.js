@@ -1,4 +1,4 @@
-$('input[type="button"]').click(createdrill);
+$("#drill").click(createdrill);
 
 function createdrill() {
   var N = parseInt($("#inputnumber3").val());

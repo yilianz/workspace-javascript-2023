@@ -156,7 +156,7 @@
 			</form>
 
 			<script>
-          // event handler
+				// event handler
           function welcome(){
             // display a welcome message 
             //get input
@@ -184,14 +184,14 @@
 			<input type="text" id="num" placeholder="Type in a number"> <sup> 2 </sup> =
 			<label id="squareresult"> ? </label>
 
-      <script>
-          // event handler
+			<script>
+				// event handler
 
 
           // register event with handler
 
 
-      </script>
+			</script>
 
 		</div>
 
@@ -207,8 +207,8 @@
 
 			<div id="message1">​
 			</div>
-      <script>
-          //handler
+			<script>
+				//handler
           function convertHTML() {
             var inputcode = document.getElementById('code').value;
             document.getElementById('message1').innerHTML = inputcode;
@@ -218,7 +218,7 @@
           // add listerner
         document.getElementById('tryit').addEventListener('click',convertHTML);
 
-      </script>
+			</script>
 
 
 		</div>
@@ -242,7 +242,7 @@
 			</p>
 
 			<script type="text/javascript">
-          // event handler
+				// event handler
           function getprice(){
             //get input
             var yearCar = document.getElementById('year').value;
@@ -288,6 +288,11 @@
                         case "warm":
                             bcolor = "green";
                             break;
+                        case "hot":
+                            bcolor = "red";
+                            break;
+                        // practice --- add more 
+
                         default:
                             bcolor = "white";
                     }
@@ -297,7 +302,7 @@
                      
                     
                     // Or set attribute
-                    document.body.setAttribute('style', "background-color: "+bcolor);
+                    document.body.setAttribute('style', "backgroud-color: "+bcolor);
                 }
           
  
@@ -327,7 +332,7 @@
 
 				</p>
 				<p>
-					<input type="button" value="Check Premium">
+					<input type="button" id="getpremium" value="Check Premium">
             </p>
 					<p id="premium">
 
@@ -335,6 +340,7 @@
 
 					<script type="text/javascript">
 						//add event listener to the button  -- TRY IT
+            document.getElementById('getpremium').addEventListener('click', premium);
            
             function premium() {
                 //get the radio element value
@@ -364,7 +370,7 @@
 
                 var answer = 10 + agefactor * coverage/1000;
                 //console.log(ageindex+" "+coverage+" "+answer);
-                document.getElementById('premium').textContent = "It is"+ answer;
+                document.getElementById('premium').textContent = "It is "+ answer;
 
                 
             }
@@ -417,9 +423,9 @@
 			<p> N = <input type="number" min="1" max="10" id="inputnumber3"> </p>
 
 				<p>
-					<input type="button" value="Click for multiplication drill">
+					<input type="button" id="drill" value="Click for multiplication drill">
             </p>
-	
+					<script src="js/mathdrill.js">
 					</script>
 		</div>
 
