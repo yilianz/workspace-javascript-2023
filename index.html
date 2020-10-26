@@ -421,7 +421,7 @@
 			<!--  Input number box -->
 			<p> N = <input type="number" min="1" max="10" id="inputnumber2"> </p>
 				<p>
-					<input type="button" value="Click for multiplication table">
+					<input type="button" id="showtable" value="Click for multiplication table">
             </p>
 
 					<!-- output section -->
@@ -431,9 +431,31 @@
 					</div>
 					<script>
 						//add event to the button
-               //
+            $('#showtable').click(showMultiplication);
 
+            //event handler  --- showtable
+			function showMultiplication(){
+			  var result="<table>";
+        //get input from the from
+        var N =parseInt(document.getElementById('inputnumber2').value);
 
+				for(var i = 1 ; i<N+1; i++){ 
+          result +="<tr>" ;
+          for(var j=1; j<=i; j++){
+            
+             var product=i*j; result +="<td>"
+					+i+"x"+j+"="+product+" </td>"; } 
+          result +="</tr>" ; } 
+          
+          result +="</table>" ; 
+          
+          //output to the output section 
+          document.getElementById('output').innerHTML = result;
+          //console.log(result);
+          
+        } 
+          
+          
 					</script>
 
 		</div>
@@ -455,6 +477,11 @@
 			<p> A simple JavaScript Quiz </p>
 			<p>Target: Generate 10 basic multiplication problems using JavaScript and check the answers</p>
 			<script>
+				  var numerofmonth = 360;
+          var loanamount = 150000;
+          var interestrate = 0.055; 
+          var monthlyrate = interestrate/12;
+          var monthlypayment = loanamount * monthlyrate/(1-Math.pow(1+monthlyrate,-numerofmonth));
 
 
 			</script>
@@ -488,6 +515,14 @@
 						</tr>
 					</table>
 					<script>
+              var randomimg = Math.floor(Math.random()*6)+1;
+              console.log(randomimg);
+              var imgE = document.getElementById('dies');
+              imgE.setAttribute('src',"img/die"+randomimg+".png");
+
+              var stat = [0,0,0,0,0,0];
+              stat[randomimg-1]++;
+              console.log(stat);
 
 					</script>
 
