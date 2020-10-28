@@ -490,34 +490,32 @@
 
           // generate quiz 
           $('#quiz span').each(function(){
-              $(this).text(gen());
+              // get the random number  -- try it with me
+
           });
 
-          // hide the next button
-          $('#quiz input[type="button"]').hide();
-
+          // hide the next button --- try it with me. 
+          
           // check answer
           $('#quiz input[type="text"]').blur(function(){
               var $A = $(this).prev();
               var $B = $A.prev();
               var ans = parseInt($A.text()) + parseInt($B.text());
               if (parseInt($(this).val()) !== ans) {
-            // highlight the answer
-            $(this).css("background-color", "red");
+                  // highlight the answer
+                   $(this).css("background-color", "red");
                 } else {
-            $(this).css("background-color", "green");
-            $('#quiz input[type="button"]').show();
+                  // if the answer is correct. background color be green and show the next button
+
+
+
+
               } 
           });
 
-          //get the next question 
+          //Get the next question --- try it 
           $('#quiz input[type="button"]').click(function(){
-               $('#quiz span').each(function(){
-                 $(this).text(gen());
-                });
-                $(this).prev().val("");
-                $(this).prev().css("background-color", "white");
-                $(this).hide();
+ 
 
           });
 
@@ -560,7 +558,6 @@
 
               var stat = [0,0,0,0,0,0];
               stat[randomimg-1]++;
-              console.log(stat);
 
 					</script>
 
