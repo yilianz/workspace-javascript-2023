@@ -476,14 +476,48 @@
 			<h1> A simple JavaScript Quiz</h1>
 			<p> A simple JavaScript Quiz </p>
 			<p>Target: Generate 10 basic multiplication problems using JavaScript and check the answers</p>
-      <p>
-      <span> </span> + <span></span> <input type = "" value =
+			<p id="quiz">
+				<span> </span> + <span></span> = <input type = "text" size="10">
+        <input type="button" value="Next">
+      </p>
 
-			<script>
+				<script>
+					//generate number from 1 to 10 
+          function gen(){
+            var num = Math.floor(Math.random()*10)+1;
+            return num;
+          }
+
+          // generate quiz 
+          $('#quiz span').each(function(){
+              $(this).text(gen());
+          });
+
+          // hide the next button
+          $('#quiz input[type="button"]').hide();
+
+          // check answer
+          $('#quiz input[type="text"]').blur(function(){
+              var $A = $(this).prev();
+              var $B = $A.prev();
+              var ans = parseInt($A.text()) + parseInt($B.text());
+              if (parseInt($(this).val()) !== ans) {
+            // highlight the answer
+            $(this).css("background-color", "red");
+                } else {
+            $(this).css("background-color", "green");
+            $('#quiz input[type="button"]').show();
+              } 
+          });
+
+          //get the next question 
+          $('#quiz input[type="button"]').click(function(){
+              
+
+          });
 
 
-
-			</script>
+				</script>
 
 
 
@@ -514,7 +548,7 @@
 						</tr>
 					</table>
 					<script>
-              var randomimg = Math.floor(Math.random()*6)+1;
+						var randomimg = Math.floor(Math.random()*6)+1;
               console.log(randomimg);
               var imgE = document.getElementById('dies');
               imgE.setAttribute('src',"img/die"+randomimg+".png");
