@@ -478,7 +478,7 @@
 			<p>Target: Generate 10 basic multiplication problems using JavaScript and check the answers</p>
 			<p id="quiz">
 				<span> </span> + <span></span> = <input type = "text" size="10">
-        <input type="button" value="Next">
+				<input type="button" value="Next">
       </p>
 
 				<script>
@@ -512,7 +512,12 @@
 
           //get the next question 
           $('#quiz input[type="button"]').click(function(){
-              
+               $('#quiz span').each(function(){
+                 $(this).text(gen());
+                });
+                $(this).prev().val("");
+                $(this).prev().css("background-color", "white");
+                $(this).hide();
 
           });
 
