@@ -491,33 +491,46 @@
           // generate quiz 
           $('#quiz span').each(function(){
               // get the random number  -- try it with me
-
+              var num1 = gen();
+              $(this).text(num1);
           });
 
           // hide the next button --- try it with me. 
+          $('#quiz input[type="button"]').hide();
           
           // check answer
           $('#quiz input[type="text"]').blur(function(){
               var $A = $(this).prev();
               var $B = $A.prev();
               var ans = parseInt($A.text()) + parseInt($B.text());
+              console.log(ans);
               if (parseInt($(this).val()) !== ans) {
                   // highlight the answer
                    $(this).css("background-color", "red");
                 } else {
                   // if the answer is correct. background color be green and show the next button
-
-
+                  $(this).css("background-color","green");
+                  $('#quiz input[type="button"]').show();
 
 
               } 
           });
 
-          //Get the next question --- try it 
-          $('#quiz input[type="button"]').click(function(){
- 
+		//Get the next question --- try it
+		$('#quiz input[type="button"]').click(function(){
+	  	// generate quiz
+		  $('#quiz span').each(function(){
+		  // get the random number -- try it with me
+		  var num1 = gen();
+		  $(this).text(num1);
+		  });
 
-          });
+      //make it nice  --- clear the text box / clear background
+      //$(this).prev().css   // who is this ???
+     // $('#quiz input[type="text"]').css(.........);
+       $('#quiz input[type="text"]').val("");
+		
+		});
 
 
 				</script>
@@ -635,15 +648,15 @@
 						<script src="script.js"> </script>
 						<script src="js/practice.js"></script>
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/8.0.0/firebase-app.js"></script>
+						<!-- The core Firebase JS SDK is always required and must be listed first -->
+						<script src="/__/firebase/8.0.0/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+						<!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/8.0.0/firebase-analytics.js"></script>
+						<script src="/__/firebase/8.0.0/firebase-analytics.js"></script>
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
+						<!-- Initialize Firebase -->
+						<script src="/__/firebase/init.js"></script>
 </body>
 
 </html>
