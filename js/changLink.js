@@ -17,6 +17,9 @@ $(function() {
 
   $("a").each(function() {
     $(this).css("text-decoration", "line-through");
+    console.log($(this).attr('href'));
     $(this).attr("href", "http://www.google.com");
   });
 });
+
+// <a href="https://www.google.com" > </a>
