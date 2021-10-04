@@ -1,0 +1,12 @@
+<svg width="1024" height="80" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+ <g>
+  <title>Layer 1</title>
+  <g id="Header">
+   <polygon id="svg_1" points="21.1,0 15.1,25.6 28.8,65.3 107,64.2 113.3,0     " fill="#ED1941"/>
+   <polygon id="svg_2" points="111,0 115,0 109,64.2 105,64.2     " fill="#C51941"/>
+   <polygon id="svg_3" points="1006.6,0 113.3,0 107,64.2 523.4,58.4 1006.6,69.1 1012.7,28.2 " fill="#0057A7"/>
+  </g>
+  <g id="Header_Buttons">
+  </g>
+ </g>
+</svg>
