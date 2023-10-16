@@ -12,64 +12,49 @@
 </head>
 
 <body>
-	<div class="wrapper">
 
-		<div class="practice">
-			<h1>
-				Hello world in JavaScript
-			</h1>
-			<p>
-				<script>
-					document.write("JavaScript is a loose typed language");
+    <div class="wrapper">
+        <div class="panelLeft">
+            
+        </div>
 
-                    document.title = "Yilian Zhang";
-                    console.log("hello world to JavaScript!!");
-				</script>
-			</p>
-			<p> Import external javascript:
-				<script src="js/hello.js"></script>
-			</p>
-		</div>
+        <div class="practice">
+            <h1>Hello world in JavaScript
+            </h1>
+            <p>
+                Please display a hello world message in JavaScript. 
+                <script>
+                    document.title = "JavaScript Basic -- In class practice -- Yilian Zhang";
+                    // use document.write to display a message
+                    
+                    // use console.log to display a message   
+                    
+                    
+                </script>
+            </p>
+            <p> Please import external file hello.js here. 
+                
+            </p>
+        </div>
 
-		<div class="practice">
-			<h1> Variable and Arithemetic Operation</h1>
-			<p> Practice on variables </p>
-			<script>
-				var a = "zhang";  
-              a = 4.5;  // type is changed .....
-              var b = 3; 
-              var c = a + 5; 
-              document.write(" c = "+c);
+        <div class="practice">
+            <h1> Variable and Arithemetic Operation</h1>
+            <p> Practice on variables </p>
 
 
-			</script>
+        </div>
 
-		</div>
+        <div class="practice">
+            <h1> JavaScript Escape Sequence</h1>
+            <p> Write an image to the page </p>
 
-		<div class="practice">
-			<h1> JavaScript Escape Sequence</h1>
-			<p> Write an image to the page </p>
-			<p id="here"> </p>
-			<script>
-				var imglist  = "";
-             for(var i = 1;i<10; i++){
-               imglist = imglist + "<img src=\"img/die1.png\">"
-             }
-             document.write(imglist);
-          
-			</script>
+            <p> Write a table to the page </p>
 
-			<p> Write a table to the page </p>
-			<script>
-				var tablelist  = "<table>";
-             for(var i = 1;i<10; i++){
-               tablelist += "<tr><td>"+i+"</td><td>"+(i*i)+"</td></tr>";
-             }
-             tablelist += "</table>"
-             document.write(tablelist);
-			</script>
+	
 
 		</div>
+
+
 
 		<div class="practice">
 			<h1>Window and document object </h1>
@@ -142,7 +127,7 @@
 					<label> Name:
                         <input type="text" id="cName">
                     </label>
-				</p>
+        </p>
 
 				<p id="message">
 
@@ -155,6 +140,7 @@
 				</p>
 			</form>
 
+
 			<script>
 				// event handler
           function welcome(){
@@ -166,6 +152,7 @@
             outputE.innerHTML="Welcome to JavaScript Event <b>" + name +"</b>";
 
           }
+
 
           // event ---> even handler
           // action 
@@ -209,16 +196,13 @@
 			</div>
 			<script>
 				//handler
-          function convertHTML() {
-            var inputcode = document.getElementById('code').value;
-            document.getElementById('message1').innerHTML = inputcode;
 
-          }
 
           // add listerner
-        document.getElementById('tryit').addEventListener('click',convertHTML);
+
 
 			</script>
+
 
 
 		</div>
@@ -423,165 +407,51 @@
 				<p>
 					<input type="button" id="showtable" value="Click for multiplication table">
             </p>
+            <script src="js\mathdrill.js">
+            </script>
+        </div>
 
-					<!-- output section -->
-					<div id="output">
+        <div class="practice">
+            <h1> A simple JavaScript Quiz</h1>
+            <p> A simple JavaScript Quiz </p>
+            <p>Target: Generate a simple substract and add problems using JavaScript and then check the answers</p>
+            <a href="quiz1.html">Do your practice in quiz1.html</a>
+        </div>
 
+        <div class="practice">
+            <h1>Change Attribute -- Rolling a dice </h1>
+            <p> <input type="button" id="roll" value="roll" /> </p>
+            <p> <img src="img/die1.png"> </p>
+            <table>
+                <tr>
+                    <th>Result</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                </tr>
+                <tr>
+                    <th>Statistics</th>
+                    <td id="r1"></td>
+                    <td id="r2"></td>
+                    <td id="r3"></td>
+                    <td id="r4"></td>
+                    <td id="r5"></td>
+                    <td id="r6"></td>
+                </tr>
+            </table>
 
-					</div>
-					<script>
-						//add event to the button
-            $('#showtable').click(showMultiplication);
-
-            //event handler  --- showtable
-			function showMultiplication(){
-			  var result="<table>";
-        //get input from the from
-        var N =parseInt(document.getElementById('inputnumber2').value);
-
-				for(var i = 1 ; i<N+1; i++){ 
-          result +="<tr>" ;
-          for(var j=1; j<=i; j++){
-            
-             var product=i*j; result +="<td>"
-					+i+"x"+j+"="+product+" </td>"; } 
-          result +="</tr>" ; } 
-          
-          result +="</table>" ; 
-          
-          //output to the output section 
-          document.getElementById('output').innerHTML = result;
-          //console.log(result);
-          
-        } 
-          
-          
-					</script>
-
-		</div>
-
-
-		<div class="practice">
-			<h1>For loop practice 3 -Math Drill </h1>
-			<p> N = <input type="number" min="1" max="10" id="inputnumber3"> </p>
-
-				<p>
-					<input type="button" id="drill" value="Click for multiplication drill">
-            </p>
-					<script src="js/mathdrill.js">
-					</script>
-		</div>
-
-		<div class="practice">
-			<h1> A simple JavaScript Quiz</h1>
-			<p> A simple JavaScript Quiz </p>
-			<p>Target: Generate 10 basic multiplication problems using JavaScript and check the answers</p>
-			<p id="quiz">
-				<span> </span> + <span></span> = <input type = "text" size="10">
-				<input type="button" value="Next">
-      </p>
-
-				<script>
-					//generate number from 1 to 10 
-          function gen(){
-            var num = Math.floor(Math.random()*10)+1;
-            return num;
-          }
-
-          // generate quiz 
-          $('#quiz span').each(function(){
-              // get the random number  -- try it with me
-              var num1 = gen();
-              $(this).text(num1);
-          });
-
-          // hide the next button --- try it with me. 
-          $('#quiz input[type="button"]').hide();
-          
-          // check answer
-          $('#quiz input[type="text"]').blur(function(){
-              var $A = $(this).prev();
-              var $B = $A.prev();
-              var ans = parseInt($A.text()) + parseInt($B.text());
-              console.log(ans);
-              if (parseInt($(this).val()) !== ans) {
-                  // highlight the answer
-                   $(this).css("background-color", "red");
-                } else {
-                  // if the answer is correct. background color be green and show the next button
-                  $(this).css("background-color","green");
-                  $('#quiz input[type="button"]').show();
+        </div>
 
 
-              } 
-          });
-
-		//Get the next question --- try it
-		$('#quiz input[type="button"]').click(function(){
-	  	// generate quiz
-		  $('#quiz span').each(function(){
-		  // get the random number -- try it with me
-		  var num1 = gen();
-		  $(this).text(num1);
-		  });
-
-      //make it nice  --- clear the text box / clear background
-      //$(this).prev().css   // who is this ???
-     // $('#quiz input[type="text"]').css(.........);
-       $('#quiz input[type="text"]').val("");
-		
-		});
+        <div class="practice">
+            <h1> Array example - Image banner</h1>
+            <div class="img-container-hide">
+                <img src="img/usca1.jpg" alt="usca" />
 
 
-				</script>
-
-
-
-		</div>
-
-		<div class="practice">
-			<h1>Change Attribute -- Rolling a dice </h1>
-			<p> <input type="button" id="roll" value="roll" /> </p>
-				<p> <img id="dies" src="img/die1.png"> </p>
-					<table>
-						<tr>
-							<th>Result</th>
-							<th>1</th>
-							<th>2</th>
-							<th>3</th>
-							<th>4</th>
-							<th>5</th>
-							<th>6</th>
-						</tr>
-						<tr>
-							<th>Statistics</th>
-							<td id="r1"></td>
-							<td id="r2"></td>
-							<td id="r3"></td>
-							<td id="r4"></td>
-							<td id="r5"></td>
-							<td id="r6"></td>
-						</tr>
-					</table>
-					<script>
-						var randomimg = Math.floor(Math.random()*6)+1;
-              console.log(randomimg);
-              var imgE = document.getElementById('dies');
-              imgE.setAttribute('src',"img/die"+randomimg+".png");
-
-              var stat = [0,0,0,0,0,0];
-              stat[randomimg-1]++;
-
-					</script>
-
-
-		</div>
-
-
-		<div class="practice">
-			<h1> Array example - Image banner</h1>
-			<div class="img-container-hide">
-				<img src="img/usca1.jpg" alt="usca" />
             </div>
 				<div class="img-container-hide">
 					<img src="img/usca2.jpg" alt="usca" />
@@ -595,6 +465,10 @@
 							<div class="img-container-hide">
 								<img src="img/usca5.jpg" alt="usca">
             </div>
+			<script>
+				
+			</script>
+
 
 							</div>
 

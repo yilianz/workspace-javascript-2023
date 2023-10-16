@@ -1,0 +1,102 @@
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 100px auto 100px;
+    column-gap: 5px;
+    width: 100%;
+    background: url(../img/patch-white.png) repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.topbar {
+    background: url(../img/ba-top-bar.svg) no-repeat center center;
+    background-size: cover;
+    grid-column: 1 / 4;
+    grid-row: 1 /2;
+}
+
+.bottombar {
+    background: url(../img/bgbottom.svg) no-repeat center center;
+    background-size: cover;
+    grid-column: 1/4;
+    grid-row: 3/4;
+    opacity: 0.8;
+}
+
+.mainwrapper {
+    background: url(../img/example-frame-correct.svg) no-repeat center center;
+    background-size: 100% 98%;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.question {
+    width: 80%;
+    margin: 8% auto;
+    padding-left: 5%;
+    font-size: 1.1em;
+}
+
+.sidebar1 {
+    background: url(../img/play-bl-over.svg) no-repeat 10% 85%;
+    grid-column: 1;
+    grid-row: 2/4;
+    z-index: 2;
+}
+
+.sidebar2 {
+    background: url(../img/homescreen-five-trees-left.svg) no-repeat center bottom;
+    background-size: 100% 60%;
+    grid-column: 3;
+    grid-row: 2/4;
+    z-index: 2;
+}
+
+.answergroup {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.answer {
+    display: inline-block;
+    width: 90px;
+    margin: 15px;
+    padding: 8px;
+    text-align: center;
+    /*border: 1px rgba(161, 160, 160, 0.8) inset;*/
+    box-shadow: inset rgba(161, 160, 160, 0.5) 0 0 10px 3px;
+}
+
+.selected {
+    box-shadow: none;
+    background: url(../img/selectanswer.JPG) no-repeat center center;
+    background-size: 90% 95%;
+}
+
+.answer input {
+    position: absolute;
+    left: -20px;
+}
+
+.answer label {
+    margin: 10px auto;
+    font-family: 'Schoolbell', cursive;
+}
+
+[type="submit"] {
+    display: block;
+    background: url(../img/button-checkbox.svg) no-repeat center center;
+    background-size: 100% 70%;
+    border: 0;
+    width: 150px;
+    height: 80px;
+    margin: 50px auto auto auto;
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 8px;
+}
+
+[type="submit"]:hover {
+    background: url(../img/play-bmr-over.svg) no-repeat center center;
+    color: white;
+}
