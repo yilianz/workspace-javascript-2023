@@ -20,7 +20,7 @@ $(function(){
     $('.panelLeft h1').click(function(){
         var index = $(this).index();
         $('div.practice').hide();
-        $('div.practice').eq(index).fadeIn(2000);
+        $('div.practice').eq(index).fadeIn(1000);
     }); 
 
 });
