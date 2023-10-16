@@ -101,6 +101,4 @@ textarea {
     width: 100%;
 }
 
-div {
-    transition: opacity ease-in-out 3s, left ease-in-out 3s;
-}
+

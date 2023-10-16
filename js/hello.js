@@ -1,7 +1,7 @@
 
 /* Send a customized message based on time
 */
-console.log("I am in the hello.js");
+//console.log("I am in the hello.js");
 
 // get the date and time 
 var today = new Date();
