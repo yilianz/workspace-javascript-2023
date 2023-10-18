@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200&display=swap');
+/* create a root variable to store stripe width , background color*/
+:root {
+    --width-height: 1.5vw;
+    --body-color: 	hsl(265, 40%, 94%);
+    --side-color: #D4CCE7;
+}
 
 html {
 
     background: linear-gradient(180deg, rgba(212, 204, 231,0.9) 70%, #fff 95% );
-    padding: 0% 2% 0% 0%;
+    padding: 0% var(--width-height) 0% 0%;
 }
 
 body {
-    background-color: #EFEAF6;
+    background-color: var(--body-color);
     color: black;
     margin: auto auto;
     padding: 0%;
@@ -25,8 +31,10 @@ body {
     padding-right: 1%;
     left: 0px;
     height: 95vh;
-    background-color: #D4CCE7;
+    background-color: var(--side-color);
     z-index: 1;
+    border-right: solid 1px;
+    border-image: linear-gradient(to bottom,var(--side-color) 3%, black 5% 95%, var(--side-color) 97% ) 1 100%;
 }
 .panelLeft h1{
     text-align: center;
@@ -34,7 +42,7 @@ body {
     font-size: 1em;
     border-bottom: 3px outset hsla(258, 36%, 25%,0.2);
     /*box-shadow : 0 2px 2px rgba(0,0,0,.2); */
-    background-color: #D4CCE7;
+    background-color: var(--side-color);
     padding-bottom: 2%;
 
 }
@@ -43,7 +51,7 @@ div.extra1{
     bottom:0;
     left:0;
     width: 100%;
-    height: 2vw;
+    height: var(--width-height);
     background: linear-gradient(to left, rgba(212, 204, 231,0.9) 70%, #fff 95% );
     z-index: 2;
 }
@@ -52,8 +60,8 @@ div.extra2{
     bottom:20vh;
     left:20%;
     right: 0;
-    height: 2vw;
-    background-color: #D4CCE7;
+    height: var(--width-height);
+    background-color: var(--side-color);
 }
 
 div.extra3{
@@ -61,16 +69,16 @@ div.extra3{
     top:0;
     left:24%;
     bottom: 0;
-    width: 2vw;
-    background-color: #D4CCE7;
+    width: var(--width-height);
+    background-color: var(--side-color);
 }
 div.extra4{
     position: fixed;
     top:0;
     left:20%;
     width: 5%;
-    height: 2vw;
-    background-color: #D4CCE7;
+    height: var(--width-height);
+    background-color: var(--side-color);
 }
 
 span {
@@ -95,10 +103,10 @@ td, th {
 div.practice {
     position: absolute;
     top: 100px;
-    left: 30%;
+    left: 35%;
     right: 10%;
     margin: auto auto;
-    background-color: #fef8f8;
+    background-color: #fef8f8; 
 	box-shadow : 0 6px 20px rgba(2, 3, 4, 0.2); 
     padding:10px;
 }
